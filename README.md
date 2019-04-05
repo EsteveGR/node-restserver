@@ -1,1 +1,3 @@
-"# Node RestServer" 
+# Node RestServer
+
+npm install
