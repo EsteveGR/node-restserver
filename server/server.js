@@ -15,12 +15,14 @@ app.use(bodyParser.json())
 
 app.use (require('./routes/usuario'));
 
+
 mongoose.connect('mongodb://localhost:27017/cafe', {useNewUrlParser: true}, (err,res) =>{
 
     if (err) throw err;
  
     console.log('Mongo ONLINE');
 });
+mongoose.set('useCreateIndex', true);
 
 app.listen(process.env.PORT, () => {
     console.log('Listening port :', process.env.PORT);
